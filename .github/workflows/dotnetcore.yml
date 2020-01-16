@@ -16,13 +16,25 @@ jobs:
     - name: Build with dotnet
       run: |
          echo $GITHUB_WORKSPACE
-         echo --------------------------------
-         ls $GITHUB_WORKSPACE
+         echo ---------------/bin-------------
+           echo $GITHUB_WORKSPACE
+         ech----
+         ls 
+           echo $GITHUB_WORKSPACE
+         ech$GITHUB_WORKSPACE/obj
+         ls $GITHUB_WORKSPACE/src
          echo --------------------------------
          dotnet build ./eShopOnWeb.sln --configuration Release
          echo --------------------------------
          echo $GITHUB_WORKSPACE
+         echo --------------------------------
          ls $GITHUB_WORKSPACE
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/bin
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/obj
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/src
     - name: Test with dotnet
       run: |
          dotnet test ./eShopOnWeb.sln --configuration Release
@@ -30,4 +42,12 @@ jobs:
          echo $GITHUB_WORKSPACE
          echo --------------------------------
          ls $GITHUB_WORKSPACE
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/bin
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/obj
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE/src
+         echo --------------------------------
+         
         
