@@ -27,7 +27,11 @@ jobs:
          echo --------------------------------
          ls $GITHUB_WORKSPACE/bin
          echo --------------------------------
+         echo Release version in bin: $GITHUB_WORKSPACE/bin/Release
+         echo --------------------------------
          ls $GITHUB_WORKSPACE/obj
+         echo --------------------------------
+         echo Release version in obj: $GITHUB_WORKSPACE/bin/Release
          echo --------------------------------
          ls $GITHUB_WORKSPACE/src
     - name: Test with dotnet
