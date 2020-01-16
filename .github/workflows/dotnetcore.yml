@@ -14,6 +14,20 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: Build with dotnet
-      run: dotnet build ./eShopOnWeb.sln --configuration Release
+      run: |
+         echo $GITHUB_WORKSPACE
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE
+         echo --------------------------------
+         dotnet build ./eShopOnWeb.sln --configuration Release
+         echo --------------------------------
+         echo $GITHUB_WORKSPACE
+         ls $GITHUB_WORKSPACE
     - name: Test with dotnet
-      run: dotnet test ./eShopOnWeb.sln --configuration Release
+      run: |
+         dotnet test ./eShopOnWeb.sln --configuration Release
+         echo --------------------------------
+         echo $GITHUB_WORKSPACE
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE
+        
