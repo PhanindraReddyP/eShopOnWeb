@@ -62,4 +62,4 @@ jobs:
     # Artifact name
          name: ApplicationCore.1.0.0.nupkg
     # Directory containing files to upload
-         path: ~/src/ApplicationCore/bin/Debug
+         path: src/ApplicationCore/bin/Debug
