@@ -33,7 +33,7 @@ jobs:
          echo --------------------------------
          echo Release version in obj: $GITHUB_WORKSPACE/bin/Release
          echo --------------------------------
-         ls $GITHUB_WORKSPACE/src/Release
+         ls $GITHUB_WORKSPACE/src
     - name: Test with dotnet
       run: |
          dotnet test ./eShopOnWeb.sln --configuration Release
