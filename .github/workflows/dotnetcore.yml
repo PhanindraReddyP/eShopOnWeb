@@ -33,7 +33,7 @@ jobs:
          echo --------------------------------
          echo Release version in obj: $GITHUB_WORKSPACE/bin/Release
          echo --------------------------------
-         ls $GITHUB_WORKSPACE/src
+         ls $GITHUB_WORKSPACE/src/Release
     - name: Test with dotnet
       run: |
          dotnet test ./eShopOnWeb.sln --configuration Release
@@ -48,5 +48,11 @@ jobs:
          echo --------------------------------
          ls $GITHUB_WORKSPACE/src
          echo --------------------------------
-         
-        
+     
+    - name: Pack the Artifacts
+      run: |
+         echo $GITHUB_WORKSPACE/src/ApplicationCore
+         echo -------------------------------------------------
+         dotnet pack $GITHUB_WORKSPACE/src/ApplicationCore/ApplicationCore.csproj
+         echo -------------------------------------------------
+         echo $GITHUB_WORKSPACE/src
