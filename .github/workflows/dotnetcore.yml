@@ -56,3 +56,10 @@ jobs:
          dotnet pack $GITHUB_WORKSPACE/src/ApplicationCore/ApplicationCore.csproj
          echo -------------------------------------------------
          echo $GITHUB_WORKSPACE/src
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+    # Artifact name
+         name: ApplicationCore.1.0.0.nupkg
+    # Directory containing files to upload
+         path: $GITHUB_WORKSPACE/src/ApplicationCore/bin/Debug
