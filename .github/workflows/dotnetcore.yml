@@ -16,13 +16,8 @@ jobs:
     - name: Build with dotnet
       run: |
          echo $GITHUB_WORKSPACE
-         echo ---------------/bin-------------
-           echo $GITHUB_WORKSPACE
-         ech----
-         ls 
-           echo $GITHUB_WORKSPACE
-         ech$GITHUB_WORKSPACE/obj
-         ls $GITHUB_WORKSPACE/src
+         echo --------------------------------
+         ls $GITHUB_WORKSPACE
          echo --------------------------------
          dotnet build ./eShopOnWeb.sln --configuration Release
          echo --------------------------------
